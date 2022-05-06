@@ -1,5 +1,5 @@
+import { Container } from "@mui/material";
 import React from "react";
-import { Container } from "react-bootstrap";
 
 const EventPage = () => {
     return <React.Fragment>

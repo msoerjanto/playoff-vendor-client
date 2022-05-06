@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-playoffvendorclient-dev-222330-authRole",
+      "UnauthRoleArn": "arn:aws:iam::109865827056:role/amplify-playoffvendorclient-dev-222330-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::109865827056:role/amplify-playoffvendorclient-dev-222330-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-playoffvendorclient-dev-222330-deployment",
+      "UnauthRoleName": "amplify-playoffvendorclient-dev-222330-unauthRole",
+      "StackName": "amplify-playoffvendorclient-dev-222330",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:109865827056:stack/amplify-playoffvendorclient-dev-222330/1c4954b0-cd48-11ec-a8fe-06dd2a2f98b2",
+      "AmplifyAppId": "d1bob5n1s0huk1"
+    },
+    "categories": {
+      "auth": {
+        "playoffvendorclient060c1a13": {}
+      }
+    }
+  }
+}

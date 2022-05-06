@@ -1,5 +1,4 @@
 import { CardWidgetProps } from "./Card/Card"
-import { GraphWidgetProps } from "./Graph/Graph"
 
 export type WidgetType = "piechart" | "card"
 
@@ -10,7 +9,7 @@ export interface BaseWidgetProps {
     title: string
 }
 
-type WidgetProps = CardWidgetProps | GraphWidgetProps
+type WidgetProps = CardWidgetProps
 
 // widget types expecting no children
 export type VoidWidgetTypes =

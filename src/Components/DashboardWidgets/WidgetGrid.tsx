@@ -12,7 +12,7 @@ export default function WidgetGrid(props: WidgetGridProps) {
     return <Grid container spacing={props.spacing}>
         {
             props.widgets.map((widget) => {
-                return <Grid item xs={12} sm={widget.width}>
+                return <Grid key={`${widget.type}-${widget.dataKey}`} item xs={12} sm={widget.width}>
                     <WidgetFactory {...widget} />
                 </Grid>
             })

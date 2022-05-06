@@ -1,9 +1,30 @@
 import { Box, Button, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';import MenuIcon from '@mui/icons-material/Menu';
-import React from "react";
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import TrophyIcon from '@mui/icons-material/EmojiEvents';
+import MenuIcon from '@mui/icons-material/Menu';
+import React, { ReactElement } from "react"; 
+import { Link } from "react-router-dom";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
+
+interface MenuItem {
+  text: string
+  icon: ReactElement
+  path: string
+}
+
+const menuItems: MenuItem[] = [
+  {
+    text: 'Dashboard',
+    icon: <DashboardIcon />,
+    path: '/',
+  },
+  {
+    text: 'Events',
+    icon: <TrophyIcon />,
+    path: '/events',
+  },
+]
 
 export default function VendorDrawer() {
     const [state, setState] = React.useState({
@@ -35,26 +56,18 @@ export default function VendorDrawer() {
           onKeyDown={toggleDrawer(anchor, false)}
         >
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
+            {menuItems.map((menuItem, index) => (
+              <Link to={menuItem.path} style={{textDecoration: 'none'}} key={menuItem.text} >
+                <ListItem button >
+                    <ListItemIcon>
+                      {menuItem.icon}
+                    </ListItemIcon>
+                  <ListItemText primary={menuItem.text} />
+                </ListItem>
+              </Link>
             ))}
           </List>
           <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
         </Box>
       );    
  

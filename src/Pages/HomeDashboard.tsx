@@ -1,10 +1,10 @@
 import { Container } from "@mui/material";
 import React from "react"
 import { Period } from "../Common/Time/Period";
-import WidgetProps from "../Components/Widgets/Widget";
-import WidgetGrid, { WidgetGridProps } from "../Components/Widgets/WidgetGrid";
+import WidgetProps from "../Components/DashboardWidgets/Widget";
+import WidgetGrid, { WidgetGridProps } from "../Components/DashboardWidgets/WidgetGrid";
 
-const HomeDashboard = () => {
+const HomeDashboardPage = () => {
 
     const period: Period = {
         startTime: new Date(),
@@ -35,4 +35,4 @@ const HomeDashboard = () => {
     </React.Fragment>
 }
 
-export default HomeDashboard;
+export default HomeDashboardPage;

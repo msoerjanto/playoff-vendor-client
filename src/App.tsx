@@ -2,7 +2,8 @@ import { styled, ThemeProvider } from '@mui/material';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Menu from './Components/Menu/Menu';
-import HomeDashboard from './Pages/HomeDashboard';
+import EventPage from './Pages/Event';
+import HomeDashboardPage from './Pages/HomeDashboard';
 import VendorTheme from './Styling/theme';
 
 
@@ -14,7 +15,8 @@ function App() {
       <Menu />
       <Offset />
       <Routes>
-        <Route path="/" element={<HomeDashboard/>} />
+        <Route path="/" element={<HomeDashboardPage/>} />
+        <Route path="/events" element={<EventPage/>} />
       </Routes>
     </React.Fragment>
   </ThemeProvider> 
